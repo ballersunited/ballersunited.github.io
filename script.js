@@ -1,140 +1,133 @@
-$(document).ready(function() {
+/* ---- particles.js config ---- */
 
-  var padOne = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3');
-  $('.pad-1').mousedown(function() {
-    padOne.load()
-    padOne.play();
-  });
-
-  var padTwo = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3');
-  $('.pad-2').mousedown(function() {
-    padTwo.load();
-    padTwo.play();
-  });
-
-  var padThree = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3');
-  $('.pad-3').mousedown(function() {
-    padThree.load();
-    padThree.play();
-  });
-
-  var padFour = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3');
-  $('.pad-4').mousedown(function() {
-    padFour.load();
-    padFour.play();
-  });
-
-  var padFive = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3');
-  $('.pad-5').mousedown(function() {
-    padFive.load();
-    padFive.play();
-  });
-
-  var padSix = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3');
-  $('.pad-6').mousedown(function() {
-    padSix.load();
-    padSix.play();
-  });
-
-  var padSeven = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3');
-  $('.pad-7').mousedown(function() {
-    padSeven.load();
-    padSeven.play();
-  });
-  
-  var padEight = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3');
-  $('.pad-8').mousedown(function() {
-    padEight.load();
-    padEight.play();
-  });
-
-  var padNine = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CB.mp3');
-  $('.pad-9').mousedown(function() {
-    padNine.load();
-    padNine.play();
-  });
-  
-  var padTen = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/BD0010.mp3');
-  $('.pad-10').mousedown(function() {
-    padTen.load();
-    padTen.play();
-  });
-  
-  var padEleven = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/BD0000.mp3');
-  $('.pad-11').mousedown(function() {
-    padEleven.load();
-    padEleven.play();
-  });
-  
-  var padTwelve = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CP.mp3');
-  $('.pad-12').mousedown(function() {
-    padTwelve.load();
-    padTwelve.play();
-  });
-  
-  
-  $(window).keydown(function(e) {
-    var code = e.keyCode;
-    var kc = String.fromCharCode(e.keyCode);
-    $("div[data-code='"+code+"']").addClass("active")
-    console.log(code);
-    
-    switch(kc) {
-      case "R":
-        padOne.load();
-        padOne.play();
-        break;
-      case "T":
-        padTwo.load();
-        padTwo.play();
-        break;
-      case "Y":
-        padThree.load();
-        padThree.play();
-        break;
-      case "U":
-        padFour.load();
-        padFour.play();
-        break;
-      case "F":
-        padFive.load();
-        padFive.play();
-        break;
-      case "G":
-        padSix.load();
-        padSix.play();
-        break;
-      case "H":
-        padSeven.load();
-        padSeven.play();
-        break;
-      case "J":
-        padEight.load();
-        padEight.play();
-        break;
-      case "V":
-        padNine.load();
-        padNine.play();
-        break;
-      case "B":
-        padTen.load();
-        padTen.play();
-        break;
-      case "N":
-        padEleven.load();
-        padEleven.play();
-        break;
-      case "M":
-        padTwelve.load();
-        padTwelve.play();
-        break;
-      default:
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 380,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
     }
-  });
-
-  $(window).keyup(function(e) { 
-    var code = e.keyCode;
-    $("div[data-code='"+code+"']").removeClass("active");
-  });
-
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
 });
+
+
+/* ---- stats.js config ---- */
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
