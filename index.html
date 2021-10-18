@@ -2,15 +2,33 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Chat App</title>
-  
+  <title>CodePen - Chat App 2.0</title>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<ul id="chats"></ul>
-<input id="msg"/>
-<button id="sendme">Send Da Msg</button>
+<div id="page1">
+  <input type="text" id="regemail" placeholder="Register Email"/>
+  <input type="password" id="regpass1" placeholder="Register Password"/>
+  <input type="password" id="regpass2" placeholder="Confirm Password"/>
+  <button type="button" id="register">Click Here To Register</button>
+  <hr>
+  <input type="text" id="logemail" placeholder="Login with Email"/>
+  <input type="password" id="logpass" placeholder="Login Password"/>
+  <button type="button" id="login">Click Here To Login</button>
+</div>
+
+
+<div class = "hidden" id="page2">
+  <ul class="no-bullets" id="chats"></ul>
+  <div class = "relative">
+    <input id="msg"/>
+    <button id="sendme">Send Da Msg</button>
+    <button id="clear">Clear Da Msgs</button>
+  </div>
+  <button class="logout" id="getout">Logout</button>
+</div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script type="module" src="./script.js"></script>
 
